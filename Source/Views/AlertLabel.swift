@@ -12,7 +12,7 @@ final class AlertLabel: ActiveLabel {
         self.numberOfLines = 0
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        let customType = ActiveType.custom(pattern: "\\sPrivacy Policy\\b")
+        let customType = ActiveType.custom(pattern: "Privacy Policy\\b")
         self.enabledTypes = [.url, customType]
         self.customColor[customType] = UIColor.blue
         self.configureLinkAttribute = { (type, attributes, isSelected) in
