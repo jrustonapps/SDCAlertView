@@ -69,6 +69,11 @@ final class AlertView: UIView, AlertControllerViewRepresentable {
         self.createContentConstraints()
         self.updateUI()
     }
+    
+    public func setPrivacyPolicy(url : String) {
+        self.titleLabel.privacyPolicy = url
+        self.messageLabel.privacyPolicy = url
+    }
 
     func addDragTapBehavior() {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.highlightAction(for:)))

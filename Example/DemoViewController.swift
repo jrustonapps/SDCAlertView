@@ -25,6 +25,7 @@ final class DemoViewController: UITableViewController {
         let message = self.messageTextField.content
         let style = AlertControllerStyle(rawValue: self.styleControl.selectedSegmentIndex)!
         let alert = AlertController(title: title, message: message, preferredStyle: style)
+        alert.setPrivacyPolicy("https://www.google.com")
 
         let textFields = Int(self.textFieldCountTextField.content ?? "0")!
         for _ in 0..<textFields {

@@ -209,6 +209,14 @@ public final class AlertController: UIViewController {
     public func addAction(_ action: AlertAction) {
         self.actions.append(action)
     }
+    
+    @objc
+    public func setPrivacyPolicy(_ url: String) {
+        
+        if self.preferredStyle == .alert && self.alert is AlertView {
+            (self.alert as! AlertView).setPrivacyPolicy(url: url)
+        }
+    }
 
     /// Adds a text field to the alert.
     ///
