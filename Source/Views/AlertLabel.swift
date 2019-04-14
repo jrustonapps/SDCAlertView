@@ -14,7 +14,7 @@ final class AlertLabel: ActiveLabel {
         
         let customType = ActiveType.custom(pattern: "Privacy Policy\\b")
         self.enabledTypes = [.url, customType]
-        self.customColor[customType] = UIColor.blue
+        self.customColor[customType] = self.tintColor
         self.configureLinkAttribute = { (type, attributes, isSelected) in
             var atts = attributes
             atts[NSAttributedString.Key.underlineStyle] = NSUnderlineStyle.single.rawValue
