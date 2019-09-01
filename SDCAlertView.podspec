@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SDCAlertView"
-  s.version          = "10.0.3"
+  s.version          = "10.0.4"
   s.swift_version = '5.0'
   s.summary          = "The little alert that could"
   s.homepage         = "https://github.com/sberrevoets/SDCAlertView"

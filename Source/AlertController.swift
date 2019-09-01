@@ -308,6 +308,11 @@ public final class AlertController: UIViewController {
 
     private func configureAlertView() {
         self.alert.translatesAutoresizingMaskIntoConstraints = false
+        
+        if #available(iOS 13, *) {
+            self.visualStyle.backgroundColor = UIColor.systemBackground
+        }
+        
         self.alert.visualStyle = self.visualStyle
         self.alert.add(self.behaviors)
 
